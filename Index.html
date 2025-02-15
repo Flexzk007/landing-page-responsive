@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pode sair, Duda?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #000000; /* Fundo preto */
+            padding: 50px;
+            color: white; /* Texto branco */
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.8); /* Fundo preto com transparência */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 60px rgb(25, 0, 255);
+            display: inline-block;
+        }
+        button {
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+        }
+        button:hover {
+            opacity: 0.8;
+        }
+        .positivo {
+            background-color: #4caf78;
+            color: #ffffff;
+        }
+        .resposta-positiva {
+            color: #4caf78;
+            font-weight: bold;
+        }
+        .negativo {
+            background-color: red;
+            color: white;
+        }
+        .resposta-negativa {
+            color: red;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .resposta-positiva-texto {
+            color: #4caf78;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .texto-pedido {
+            font-weight: bold;
+        }
+        .gif-pedido {
+            margin-top: 20px;
+            width: 200px; /* Ajuste o tamanho do GIF aqui */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>PEDIDO PARA SAIR COM A DUDA</h1>
+        <p class="texto-pedido">Tia Ro e Tio Ale</p>
+        <p class="texto-pedido">Eu gostaria de levar a Duda para renovar nossas fotos juntos e comer algo gostoso.</p>
+        <p class="texto-pedido">Prometo que ela estará segura e voltará feliz! Vocês deixam?</p>
+        <button class="positivo" onclick="responder('sim')">Sim, pode ir! 😊</button>
+        <button class="negativo" onclick="responder('nao')">Não, fiquem em casa! 😢</button>
+        <p id="resposta"></p>
+        
+        <!-- GIF animado pedindo para sair -->
+        <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmNrb2x4bmphaHV5YzFzYjl6dzk5amd0eXNka3Nla2ozMGZoa2NpNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ffzhLUixCtlsc/giphy.gif" alt="Pedido para sair" class="gif-pedido">
+    </div>
+
+    <script>
+        function responder(resposta) {
+            if (resposta === 'sim') {
+                document.getElementById("resposta").innerHTML = "Obrigaaaado! Prometo que será um dia incrível! 😍";
+                document.getElementById("resposta").className = "resposta-positiva-texto";
+            } else {
+                document.getElementById("resposta").innerHTML = "Ahh... Que pena! Mas respeito a decisão! 😔";
+                document.getElementById("resposta").className = "resposta-negativa";
+            }
+        }
+    </script>
+</body>
+</html>
